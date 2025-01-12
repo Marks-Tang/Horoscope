@@ -1,0 +1,38 @@
+/**
+ * app.wxss - 全局样式文件
+ */
+
+/* 页面通用样式 */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  background: #f8f8f8;
+}
+
+/* 卡片通用样式 */
+.card {
+  width: 100%;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.05);
+}
+
+/* 文本通用样式 */
+.title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.desc {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.6;
+}
