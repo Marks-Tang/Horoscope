@@ -1,0 +1,16 @@
+<view class="nav-bar">
+  <view class="nav-item {{currentTab == 0 ? 'active' : ''}}" bindtap="switchTab" data-index="0">
+    <image src="/assets/icons/fortune{{currentTab == 0 ? '_active' : ''}}.png" class="nav-icon"></image>
+    <text class="nav-text">星座运势</text>
+  </view>
+  
+  <view class="nav-item {{currentTab == 1 ? 'active' : ''}}" bindtap="switchTab" data-index="1">
+    <image src="/assets/icons/placeholder.png" class="nav-icon"></image>
+    <text class="nav-text">敬请期待</text>
+  </view>
+  
+  <view class="nav-item {{currentTab == 2 ? 'active' : ''}}" bindtap="switchTab" data-index="2">
+    <image src="/assets/icons/placeholder.png" class="nav-icon"></image>
+    <text class="nav-text">敬请期待</text>
+  </view>
+</view>

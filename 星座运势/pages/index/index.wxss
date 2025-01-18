@@ -1,0 +1,142 @@
+/**index.wxss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 20rpx;
+  box-sizing: border-box;
+  padding-bottom: 120rpx;
+}
+
+.header {
+  text-align: center;
+  padding: 20rpx 0;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.zodiac-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20rpx;
+  width: 100%;
+}
+
+/* 包装器样式 */
+.zodiac-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rpx;
+}
+
+/* 2. 标题样式 - 增加设计感 */
+.page-title {
+  font-size: 40rpx;
+  color: #333;
+  text-align: center;
+  margin: 180rpx 20rpx 40rpx;  /* 上下间距加大 */
+  font-weight: bold;
+  position: relative;
+  padding: 20rpx 0;
+}
+
+/* 标题装饰线 */
+.page-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80rpx;
+  height: 6rpx;
+  background: linear-gradient(90deg, #ff9a9e 0%, #fad0c4 100%);
+  border-radius: 3rpx;
+}
+
+/* 3. 星座列表容器 */
+.zodiac-list {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 10rpx;
+}
+
+/* 4. 星座行容器 */
+.zodiac-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60rpx;  /* 增加行间距 */
+}
+
+/* 5. 星座项容器 */
+.zodiac-item {
+  width: 33.33%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+
+/* 6. 星座图标 */
+.zodiac-icon {
+  width: 140rpx;
+  height: 140rpx;
+  margin-bottom: 24rpx;  /* 增加图片与文字的距离 */
+}
+
+/* 7. 星座名称 */
+.zodiac-name {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 10rpx;  /* 增加名称与日期的间距 */
+  line-height: 1.4;
+  text-align: center;
+  font-weight: 500;  /* 稍微加粗 */
+}
+
+/* 8. 星座日期 */
+.zodiac-date {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 1.4;  /* 增加行高 */
+  text-align: center;
+}
+
+/* Logo样式 */
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40rpx 0;
+}
+
+.logo {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+/* 导航栏样式调整 */
+.nav-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}

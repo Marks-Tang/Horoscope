@@ -1,0 +1,48 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="back-btn" bindtap="goBack">
+      <text class="back-text">返回</text>
+    </view>
+    
+    <view class="zodiac-info">
+      <image class="zodiac-image" src="{{zodiacInfo.icon}}" mode="aspectFit"/>
+      <view class="zodiac-name">{{zodiacInfo.name}}</view>
+      <view class="zodiac-date">{{zodiacInfo.date}}</view>
+    </view>
+  </view>
+
+  <scroll-view scroll-y class="fortune-content">
+    <!-- 运势概述 -->
+    <view class="fortune-section">
+      <view class="section-title">今日运势</view>
+      <view class="section-content">{{fortune.overall}}</view>
+    </view>
+
+    <!-- 爱情运势 -->
+    <view class="fortune-section">
+      <view class="section-title">爱情运势</view>
+      <view class="section-content">{{fortune.love}}</view>
+    </view>
+
+    <!-- 事业运势 -->
+    <view class="fortune-section">
+      <view class="section-title">事业运势</view>
+      <view class="section-content">{{fortune.career}}</view>
+    </view>
+
+    <!-- 财运 -->
+    <view class="fortune-section">
+      <view class="section-title">财运</view>
+      <view class="section-content">{{fortune.wealth}}</view>
+    </view>
+
+    <!-- 推荐食物 -->
+    <view class="fortune-section">
+      <view class="section-title">今日幸运食物</view>
+      <view class="food-list">
+        <text wx:for="{{fortune.foods}}" wx:key="index" class="food-item">{{item}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

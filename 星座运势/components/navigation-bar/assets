@@ -1,0 +1,7 @@
+项目根目录/
+  ├── assets/
+  │   ├── logo.png            // 首页 logo
+  │   └── zodiac/             // 星座图标文件夹
+  │       ├── aries.png       // 白羊座
+  │       ├── taurus.png      // 金牛座
+  │       └── ...            // 其他星座图标

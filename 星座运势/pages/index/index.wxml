@@ -1,0 +1,80 @@
+<!--index.wxml-->
+<navigation-bar class="nav-bar" bind:tabChange="onTabChange"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <!-- 页面标题 -->
+    <view class="page-title">星座占卜神！</view>
+    
+    <view class="zodiac-list">
+      <!-- 第一行 -->
+      <view class="zodiac-row">
+        <view class="zodiac-item" 
+              wx:for="{{zodiacList}}" 
+              wx:key="id"
+              bindtap="onSelectZodiac" 
+              data-index="{{index}}"
+              wx:if="{{index < 3}}">
+          <image class="zodiac-icon" 
+                 src="{{item.icon}}" 
+                 mode="aspectFit">
+          </image>
+          <text class="zodiac-name">{{item.name}}</text>
+          <text class="zodiac-date">{{item.date}}</text>
+        </view>
+      </view>
+      
+      <!-- 第二行 -->
+      <view class="zodiac-row">
+        <view class="zodiac-item" 
+              wx:for="{{zodiacList}}" 
+              wx:key="id"
+              bindtap="onSelectZodiac" 
+              data-index="{{index}}"
+              wx:if="{{index >= 3 && index < 6}}">
+          <image class="zodiac-icon" 
+                 src="{{item.icon}}" 
+                 mode="aspectFit">
+          </image>
+          <text class="zodiac-name">{{item.name}}</text>
+          <text class="zodiac-date">{{item.date}}</text>
+        </view>
+      </view>
+      
+      <!-- 第三行 -->
+      <view class="zodiac-row">
+        <view class="zodiac-item" 
+              wx:for="{{zodiacList}}" 
+              wx:key="id"
+              bindtap="onSelectZodiac" 
+              data-index="{{index}}"
+              wx:if="{{index >= 6 && index < 9}}">
+          <image class="zodiac-icon" 
+                 src="{{item.icon}}" 
+                 mode="aspectFit">
+          </image>
+          <text class="zodiac-name">{{item.name}}</text>
+          <text class="zodiac-date">{{item.date}}</text>
+        </view>
+      </view>
+      
+      <!-- 第四行 -->
+      <view class="zodiac-row">
+        <view class="zodiac-item" 
+              wx:for="{{zodiacList}}" 
+              wx:key="id"
+              bindtap="onSelectZodiac" 
+              data-index="{{index}}"
+              wx:if="{{index >= 9}}">
+          <image class="zodiac-icon" 
+                 src="{{item.icon}}" 
+                 mode="aspectFit">
+          </image>
+          <text class="zodiac-name">{{item.name}}</text>
+          <text class="zodiac-date">{{item.date}}</text>
+        </view>
+      </view>
+    </view>
+
+    <navigation-bar class="nav-bar"></navigation-bar>
+  </view>
+</scroll-view>
